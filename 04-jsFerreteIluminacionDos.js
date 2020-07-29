@@ -81,7 +81,7 @@ function CalcularPrecio() {
        
            
     }
-    alert (vPrecioFinal);
+
     if (vPrecioFinal > 120) {
         vPFconIIBB = vPrecioFinal * 1.1;
         vIIBB = vPrecioFinal * 0.1;
