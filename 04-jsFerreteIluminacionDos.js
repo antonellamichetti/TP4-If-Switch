@@ -69,7 +69,7 @@ function CalcularPrecio() {
             else if (vMarca == "FelipeLamparas" || vMarca == "JeLuz" || vMarca == "HazIluminacion" || vMarca == "Osram") {
                 vDescuento = 0.7;
                 vPrecioFinal = (vCant * vPrecio) * vDescuento;
-                 document.getElementById("txtIdprecioDescuento").value = vPrecioFinal;
+                document.getElementById("txtIdprecioDescuento").value = vPrecioFinal;
             }
             break;
         default:
@@ -78,15 +78,18 @@ function CalcularPrecio() {
                 vPrecioFinal = (vCant * vPrecio) * vDescuento.toFixed(2);
                 document.getElementById("txtIdprecioDescuento").value = vPrecioFinal;
             }
-   /////ESTE IF CON EL ALERT NO LO LEE Y NO SE POR QUE /////////////         
-            if (vPrecioFinal > 120) {
-                vPFconIIBB = vPrecioFinal * 1.1;
-                vIIBB = vPrecioFinal * 0.1;
-                parseFloat(document.getElementById("txtIdprecioDescuento").value) = vPFconIIBB;
-
-                alert("IIBB Usted pagó " + vPFconIIBB.toFixed(2) + ", siendo " + vIIBB.toFixed(2) + " el impuesto que se pagó");
-            }
+       
+           
     }
+    alert (vPrecioFinal);
+    if (vPrecioFinal > 120) {
+        vPFconIIBB = vPrecioFinal * 1.1;
+        vIIBB = vPrecioFinal * 0.1;
+        document.getElementById("txtIdprecioDescuento").value = vPFconIIBB;
 
-
+        alert("IIBB Usted pagó " + vPFconIIBB.toFixed(2) + ", siendo " + vIIBB.toFixed(2) + " el impuesto que se pagó");
+    }
 }
+
+
+
